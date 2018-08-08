@@ -1,0 +1,19 @@
+<header class="site-header single-column">
+  <div style="display: flex; align-items: center">
+    <img class="site-header__logo" style="margin-right: 1em" src="{{ .Site.BaseURL }}/icon256.png">
+    <a href="{{ .Site.BaseURL }}{{ .Site.LanguagePrefix }}" class="color-primary h3">
+      {{ .Site.Title }}
+    </a>
+  </div>
+  <nav class="site-nav">
+    <a href="{{ .Site.BaseURL }}{{ .Site.LanguagePrefix }}/categories/">{{ i18n "categories" }}</a>
+    <a href="https://www.loomio.org?frontpage">Loomio.org</a>
+    {{- if .Site.IsMultiLingual -}}
+    {{- range $lang := .Site.Languages -}}
+    {{- if ne $.Site.Language $lang -}}
+    <a href="/{{ $lang }}">{{ $lang }}</a>
+    {{- end -}}
+    {{- end -}}
+    {{- end -}}
+  </nav>
+</header>

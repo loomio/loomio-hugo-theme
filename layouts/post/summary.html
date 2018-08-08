@@ -1,0 +1,11 @@
+<div class="post clearfix">
+  <a href="{{ .Permalink }}">
+    {{if isset .Params "image" }}
+    <img class="post-image" src="{{ index .Params "image" }}">
+    {{ end }}
+    <h2 class="post-title h1">{{ .Title }} {{ if .Draft }}(draft){{end}}</h3>
+    {{ partial "post/meta.html" . }}
+  </a>
+  <p class="post-summary">{{ .Summary }}</p>
+  <a class="text-black post-link" href="{{ .Permalink  }}">Read more…</a>
+</div>

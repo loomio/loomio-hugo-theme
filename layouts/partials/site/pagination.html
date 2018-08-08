@@ -1,0 +1,4 @@
+{{ $paginator := .Paginate (where .Pages "Type" "post") }}
+<nav class='site-pagination single-column'>
+  {{ template "_internal/pagination.html" . }}
+</nav>

@@ -1,0 +1,40 @@
+.site-header {
+  margin: 2rem 0;
+  padding-bottom: 2em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (min-width: 480px) {
+  .site-header {
+    flex-direction: row;
+  }
+}
+
+.site-nav a {
+  font-size: 1rem;
+}
+
+.site-header__logo {
+  width: 32px;
+  height: auto;
+}
+
+.site-nav a + a {
+  margin-left: 1em;
+}
+
+.site-nav {
+  margin: 0;
+  padding: 0;
+}
+
+.site-footer {
+  border-top: thin solid #f3f3f3;
+  height: 120px;
+  color: #7a7a7a;
+  background-color: #fafafa;
+  font-weight: 300;
+}

@@ -1,0 +1,32 @@
+.site-pagination {
+  margin: 0 auto;
+}
+.pagination {
+  list-style: none;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pagination a, .pagination .disabled {
+  transition: all 0.2s ease-in-out;
+  background: #fafafa;
+  border-radius: 0.1875em;
+  border: 1px solid #f3f3f3;
+  color: #333333;
+  padding: 1em 1em;
+}
+
+.pagination .disabled {
+  opacity: 0.5;
+}
+
+.pagination a:hover, .pagination a:focus {
+  background: white;
+  color: #477dca;
+}
+
+.pagination a:active {
+  background: #f7f7f7;
+}

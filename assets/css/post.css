@@ -1,0 +1,78 @@
+.post {
+  /* wordpress handover classes */
+  img.alignleft {
+    display: inline;
+    float: left;
+    margin: 1em 2em 1em 0;
+  }
+
+  img.alignright {
+    display: inline;
+    float: right;
+    margin: 1em 0em 1em 2em;
+  }
+
+  img.aligncenter{
+    display: block;
+    margin: 1em auto;
+  }
+}
+
+.posts .post {
+  margin-top: 1em;
+  margin-bottom: 2em;
+  padding-bottom: 2em;
+}
+
+.post-body a {
+  color: $color-black;
+  border-bottom: 2px solid $color-secondary;
+  transition: 0.3s;
+}
+
+.post-body a img {
+  text-decoration: none;
+  border-bottom: 0;
+}
+
+.post-body img {
+    display: block;
+    margin: 0 auto;
+}
+
+a .post-title {
+  color: $color-black;
+  text-decoration: underline;
+  text-decoration-color: $color-secondary;
+}
+
+.posts .post:last-child {
+  border-bottom: none;
+  margin-bottom: .375em;
+  padding-bottom: 0;
+}
+
+.post-footer {
+  font-style: italic;
+  margin-top: .75rem;
+  text-align: center;
+}
+
+.post-footer .avatar {
+  margin: 2rem 0;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.post-meta {
+  color: $color-grey-dark;
+  font-style: italic;
+}
+
+.post-image {
+  width: 100%;
+}
+
+.related-post-title {
+  border-bottom: thin solid #f3f3f3;
+}

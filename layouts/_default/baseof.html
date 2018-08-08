@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Roboto+Slab" rel="stylesheet">
+    <link rel="canonical" href="{{ .Permalink }}">
+    <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}/styles.css">
+    {{ partial "matomo.html" . }}
+  </head>
+  <body>
+    {{ partial "site/header.html" . }}
+    {{- block "main" . }}{{- end }}
+    {{ partial "site/footer.html" . }}
+  </body>
+</html>
