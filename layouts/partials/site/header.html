@@ -7,8 +7,8 @@
   </div>
   <nav class="site-nav">
     {{ if eq .Site.Title "Loomio Help"}}
-      <a href="https://www.loomio.org?frontpage">App</a>
       <a href="https://blog.loomio.org">Blog</a>
+      <a href="https://www.loomio.org?frontpage">App</a>
     {{ else }}
       <a href="{{ .Site.BaseURL }}{{ .Site.LanguagePrefix }}/categories/">{{ i18n "categories" }}</a>
       <a href="https://help.loomio.org">Help</a>
