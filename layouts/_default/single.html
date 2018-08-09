@@ -1,10 +1,14 @@
 {{ define "main" }}
-<main class="single-column">
+<main class="single-column doc">
   <article>
-    <header>
-      <h1>{{ .Title }}</h1>
-    </header>
-    {{ .Content }}
+    {{- partial "doc/header.html" . -}}
+    <aside class="toc">
+      <h2 class="h4">Contents</h2>
+      {{.TableOfContents}}
+    </aside>
+    <div class="doc-body">
+      {{.Content}}
+    </div>
   </article>
 </main>
 {{ end }}

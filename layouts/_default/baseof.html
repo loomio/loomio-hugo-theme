@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ .Site.LanguageCode }}">
   <head>
+    <title>{{ block "title" . }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    {{ .Hugo.Generator }}
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ .Title }} - {{ .Site.Title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    {{ with .Description }} <meta name="description" content="{{ . }}"> {{ end }}
+    {{ partial "favicon" . }}
     <meta name="author" content="">
     <meta name="keywords" content="">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Roboto+Slab" rel="stylesheet">
     <link rel="canonical" href="{{ .Permalink }}">
-    <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}/styles.css">
+    <link rel="stylesheet" type="text/css" href="/styles.css">
     {{ partial "matomo.html" . }}
   </head>
   <body>

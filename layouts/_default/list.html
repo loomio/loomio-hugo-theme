@@ -1,0 +1,41 @@
+{{ define "main" }}
+<article class="single-column">
+  {{- partial "doc/header.html" . -}}
+  {{ if (isset .Page.Params "listmenu") }}
+    {{ range .Page.Menus.main.Children }}
+      <hr>
+      {{ if .HasChildren }}
+        {{ with .Page }}
+          <h2>{{ .Title }}</h2>
+          <p>{{ .Description }}</p>
+        {{ end }}
+        <!-- <ul> -->
+        {{ range .Children }}
+          {{ with .Page }}
+            <p>
+              <a href="{{ .URL }}"> {{ .Title }} </a> -
+              <span>{{ .Description }}</span>
+            </p>
+          {{ end }}
+        {{ end }}
+        <!-- </ul> -->
+      {{ else }}
+        {{ with .Page }}
+            <a href="{{ .URL }}" class="h2"> {{ .Title }} </a>
+            <p>{{ .Description }}</p>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ else }}
+    <ul>
+    {{ range .Pages }}
+      <li>
+        <a href="{{ .URL }}" class="mui--text-title"> {{ .Title }} </a>
+        <p>{{ .Description }}</p>
+      </li>
+    {{ end }}
+    </ul>
+  {{ end }}
+  {{.Content}}
+</article>
+{{ end }}

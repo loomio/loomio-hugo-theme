@@ -2,6 +2,7 @@
 @import "./normalize.css";
 @import "./variables.css";
 @import "./elements.css";
+@import "./doc.css";
 @import "./post.css";
 @import "./site.css";
 @import "./utils.css";

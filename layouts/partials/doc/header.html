@@ -1,0 +1,10 @@
+<header class="doc-header">
+  {{ if .Parent }}
+  <nav>
+    <a class="h3" href="{{.Parent.URL}}">{{.Parent.Title}}</a>
+  </nav>
+  {{ end }}
+
+  <h1>{{.Title}}</h1>
+  <p>{{.Description}}</p>
+</header>
