@@ -6,7 +6,7 @@
   (function() {
     var u="//hello.loomio.io/";
     _paq.push(['setTrackerUrl', u+'js/']);
-    _paq.push(['setSiteId', '4']);
+    _paq.push(['setSiteId', '{{.Site.Params.matomoId}}']);
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
     g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'js/'; s.parentNode.insertBefore(g,s);
   })();
