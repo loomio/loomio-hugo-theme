@@ -1,29 +1,33 @@
+{{ define "left"}}
+  {{- partial "site/sidenav.html" . -}}
+{{ end }}
+
 {{ define "main" }}
-<article class="single-column ">
+<main>
   {{- partial "doc/header.html" . -}}
   {{ if (isset .Page.Params "listmenu") }}
-    {{ range .Page.Menus.main.Children }}
-      <hr />
-      {{ $menuItem := . }}
-      {{ with .Page }}
-         {{ if $menuItem.HasChildren }}
-         <h2>{{ .Title }}</h2>
-         {{ else }}
-         <h2><a href="{{ .URL }}" class="h2">{{ .Title }}</a></h2>
-         {{ end }}
-        <p>{{ .Description }}</p>
-      {{ end }}
-      {{ range .Children }}
-        {{ with .Page }}
-          <p><a href="{{ .URL }}">{{ .Title }}</a> - {{ .Description }}</p>
-        {{ end }}
-      {{ end }}
-    {{ end }}
+  {{ range .Page.Menus.main.Children }}
+  <hr />
+  {{ $menuItem := . }}
+  {{ with .Page }}
+  {{ if $menuItem.HasChildren }}
+  <h2>{{ .Title }}</h2>
   {{ else }}
-    {{ range .Pages }}
-      <p><a href="{{ .URL }}">{{ .Title }}</a> - {{ .Description }}</p>
-    {{ end }}
+  <h2><a href="{{ .URL }}" class="h2">{{ .Title }}</a></h2>
+  {{ end }}
+  <p>{{ .Description }}</p>
+  {{ end }}
+  {{ range .Children }}
+  {{ with .Page }}
+  <p><a href="{{ .URL }}">{{ .Title }}</a> - {{ .Description }}</p>
+  {{ end }}
+  {{ end }}
+  {{ end }}
+  {{ else }}
+  {{ range .Pages }}
+  <p><a href="{{ .URL }}">{{ .Title }}</a> - {{ .Description }}</p>
+  {{ end }}
   {{ end }}
   {{.Content}}
-</article>
+</main>
 {{ end }}

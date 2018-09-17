@@ -1,7 +1,7 @@
 <header class="doc-header">
   {{ if .Parent }}
-    {{ if not (eq .Parent.URL "/")}}
-    <nav>
+    {{ if not (eq .Parent.URL "/en/")}}
+    <nav id="parentPageLink">
       <a class="h3" href="{{.Parent.URL}}">{{.Parent.Title}}</a>
     </nav>
     {{ end }}

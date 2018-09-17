@@ -1,14 +1,18 @@
+{{ define "left"}}
+{{- partial "site/sidenav.html" . -}}
+{{ end }}
+
 {{ define "main" }}
-<main class="single-column doc">
+<main class="doc">
   <article>
     {{- partial "doc/header.html" . -}}
-    <aside class="toc">
-      <h2 class="h4">Contents</h2>
-      {{.TableOfContents}}
-    </aside>
     <div class="doc-body">
       {{.Content}}
     </div>
   </article>
 </main>
 {{ end }}
+
+{{ define "right"}}
+{{- partial "site/toc.html" . -}}
+{{ end}}

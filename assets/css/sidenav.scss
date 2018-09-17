@@ -1,0 +1,17 @@
+.sidenav {
+  ul {
+    list-style-type: none;
+    ul {
+      border-left: 2px solid $color-primary;
+    }
+  }
+  ul.active {
+    border-left: 2px solid $color-primary;
+  }
+}
+.toc {
+  font-size: .8em;
+  li {
+    margin: .5em 0;
+  }
+}

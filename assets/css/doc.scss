@@ -1,0 +1,15 @@
+// /* hide the first level of menu. hugo is dumb */
+nav#TableOfContents > ul{
+  padding-left: 0;
+  border-left: 0;
+}
+nav#TableOfContents > ul > li > ul {
+  padding-left: 0;
+  border-left: 0;
+}
+
+// nav#TableOfContents > ul > li{
+//   list-style-type: none;
+// }
+//
+// /* make the second level look like the first */
