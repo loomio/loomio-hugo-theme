@@ -17,7 +17,7 @@
       {{ $baseurl := .Site.BaseURL }}
       {{ range $i, $e := .Params.categories }}
           {{if $i}},&nbsp;{{end}}
-          <a href="{{ $baseurl }}{{ $.Site.LanguagePrefix }}/categories/{{ . }}">{{ . }}</a>
+          <a href="{{ $baseurl }}{{ $.Site.LanguagePrefix }}/categories/{{ replace (strings.ToLower .) " " "-"  }}">{{ . }}</a>
       {{ end }}
     </p>
   </aside>
