@@ -23,7 +23,7 @@
     </div>
     <div style="padding-top: 10px; display: flex; justify-content: space-between;">
       <div>Copyright Loomio Cooperative &#169; 2018</div>
-      {{ if (eq .Site.BaseURL "https://help.loomio.org") }}
+      {{ if .Site.Params.canEdit }}
         <div><a href="https://github.com/{{.Site.Params.repoName}}/edit/master/content/{{.File.Path}}">Edit this page</a> or <a href="/en/dev_manual/editing_help/">learn how</a>.</div>
       {{ end }}
     </div>
