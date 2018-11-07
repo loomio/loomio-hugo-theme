@@ -33,28 +33,4 @@
     </div>
     {{ partial "site/footer.html" . }}
   </body>
-  <script>
-    function getPageScroll() {
-      if (self.pageYOffset) {
-        return self.pageYOffset;
-      } else if (document.documentElement && document.documentElement.scrollTop) {
-        return document.documentElement.scrollTop;
-      } else if (document.body) {// all other Explorers
-        return document.body.scrollTop;
-      }
-    }
-
-    tocPos = function() {
-      scroll = getPageScroll();
-      console.log(document.documentElement.scrollHeight, window.innerHeight);
-      maxScroll = document.documentElement.scrollHeight - window.innerHeight - 400;
-      if (scroll < 100) { return 0 };
-      if (scroll > maxScroll) { return maxScroll };
-      if (scroll > 150) { return scroll - 150 };
-    }
-
-    window.onscroll = function (e) {
-      document.getElementById('toc').style.marginTop = tocPos()+"px";
-    }
-  </script>
 </html>

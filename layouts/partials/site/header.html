@@ -6,6 +6,10 @@
     </a>
   </div>
   <nav class="site-nav">
+    <form style="display: inline-block; margin-right: 1em; border-bottom: 2px solid #CCC" method="get" action="https://duckduckgo.com/">
+    <input size="15" name="q" placeholder="🔎 Search">
+    <input type="hidden" name="sites" value="{{ .Site.BaseURL }}">
+    </form>
     {{ if eq .Site.Title "Loomio Help"}}
       <a href="https://blog.loomio.org">Blog</a>
       <a href="https://www.loomio.org?frontpage">App</a>

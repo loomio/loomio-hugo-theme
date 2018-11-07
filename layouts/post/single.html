@@ -13,11 +13,11 @@
     <section>
   </article>
   <aside>
-    <p class="post-meta">{{ i18n "tags" }}:&nbsp;
+    <p class="post-meta">{{ i18n "categories" }}:&nbsp;
       {{ $baseurl := .Site.BaseURL }}
       {{ range $i, $e := .Params.categories }}
           {{if $i}},&nbsp;{{end}}
-          <a href="{{ $baseurl }}{{ $.Site.LanguagePrefix }}/tags/{{ . }}">{{ . }}</a>
+          <a href="{{ $baseurl }}{{ $.Site.LanguagePrefix }}/categories/{{ replace (strings.ToLower .) " " "-"  }}">{{ . }}</a>
       {{ end }}
     </p>
   </aside>
