@@ -8,14 +8,20 @@ nav#TableOfContents > ul > li > ul {
   border-left: 0;
 }
 
+pre code {
+  display: block;
+  padding: 1em;
+}
+
 code {
+  font-family: consolas,monaco,monospace;
+  line-height: 1.5;
+  background-color: #eee;
   border-radius: 4px;
   border: 1px solid #cfd7e6;
-  font-family: consolas,monaco,monospace;
-  padding-left: 5px;
-  padding-right: 5px;
-  line-height: 1.5;
 }
+
+
 // nav#TableOfContents > ul > li{
 //   list-style-type: none;
 // }
