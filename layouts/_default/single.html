@@ -1,5 +1,7 @@
 {{ define "left"}}
+{{if (isset .Params "hideSideNav") }}
 {{- partial "site/sidenav.html" . -}}
+{{ end }}
 {{ end }}
 
 {{ define "main" }}
