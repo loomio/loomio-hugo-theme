@@ -43,3 +43,17 @@
     list-style-type: none;
   }
 }
+
+.site-footer__newsletter {
+  border: 2px dotted $color-primary;
+  color: $color-black;
+  text-align: center;
+  padding: 1em;
+  p {
+    margin-top: 0;
+  }
+}
+
+.site-footer__newsletter-hr {
+  border-bottom: 1px solid $color-grey-lighter;
+}
