@@ -11,6 +11,7 @@
     {{ range .Children }}
     <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
       <a href="{{ .URL }}">{{ .Name }}</a>
+      {{ if .Children }}
       <ul class="sub-menu">
         {{ range .Children }}
         <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
@@ -18,6 +19,7 @@
         </li>
         {{ end }}
       </ul>
+      {{ end }}
     </li>
     {{ end }}
   </ul>
