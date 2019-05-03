@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{ with .Description }} <meta name="description" content="{{ . }}"> {{ end }}
     {{ partial "favicon" . }}
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
     <link rel="canonical" href="{{ .Permalink }}">
 
     {{ $style := resources.Get "css/index.scss" | resources.ToCSS }}
