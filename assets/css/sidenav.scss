@@ -1,9 +1,15 @@
 .sidenav {
-  a { color: $color-black }
+  // font-size: 0.85rem;
+  font-size: .9em;
+  a { color: $color-black; }
   ul {
+    padding-top: 0.25em ;
+    padding-bottom: 0.25em ;
+    margin-top: 0.25em ;
+    margin-bottom: 0.25em ;
     list-style-type: none;
     ul {
-      border-left: 2px solid $color-primary;
+      // border-left: 2px solid $color-primary;
     }
   }
   ul.active {
@@ -11,7 +17,7 @@
   }
 }
 .toc {
-  font-size: .8em;
+  font-size: .9em;
   li {
     margin: .5em 0;
   }
