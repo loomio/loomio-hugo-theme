@@ -16,9 +16,12 @@
     border-left: 2px solid $color-primary;
   }
 }
+
 .toc {
-  font-size: .9em;
   li {
-    margin: .5em 0;
+    list-style-type: none;
   }
+  // li {
+  //   margin: .5em 0;
+  // }
 }
