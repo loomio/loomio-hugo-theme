@@ -6,7 +6,7 @@
 
 .multi-column {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   padding: 0 1rem;
 }
 
@@ -16,8 +16,8 @@
 
 .multi-column__side {
   display: none;
-  min-width: 16em;
-  max-width: 16em;
+  min-width: 18em;
+  max-width: 18em;
   margin-top: 4em;
   padding: 1em;
 }
