@@ -7,7 +7,6 @@
   {{- partial "doc/header.html" . -}}
   {{ if (isset .Page.Params "listmenu") }}
   {{ range .Page.Menus.main.Children }}
-  <hr />
   {{ $menuItem := . }}
   {{ with .Page }}
   {{ if $menuItem.HasChildren }}
