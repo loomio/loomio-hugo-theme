@@ -3,19 +3,19 @@
 <ul>
 {{ range .Site.Menus.main }}
 <li>
-  <a href="{{ .URL }}">
+  <a class="sidenav-l1 {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}" href="{{ .URL }}">
     {{ .Pre }}
     <span>{{ .Name }}</span>
   </a>
   <ul class="sub-menu">
     {{ range .Children }}
-    <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
-      <a href="{{ .URL }}">{{ .Name }}</a>
+    <li>
+      <a class="sidenav-l2 {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
       {{ if .Children }}
       <ul class="sub-menu">
         {{ range .Children }}
-        <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
-          <a href="{{ .URL }}">{{ .Name }}</a>
+        <li>
+          <a class="sidenav-l3 {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
         </li>
         {{ end }}
       </ul>

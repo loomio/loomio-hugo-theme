@@ -18,15 +18,16 @@
   {{ end }}
   {{ range .Children }}
   {{ with .Page }}
-  <p><a href="{{ .URL }}">{{ .Title }}</a> - {{ .Description }}</p>
+  <p><a href="{{ .URL }}">{{ .Title }}</a> {{ if .Description}} - {{end}} {{ .Description }}</p>
   {{ end }}
   {{ end }}
   {{ end }}
   {{ else }}
   {{ range .Pages }}
-  <p><a href="{{ .URL }}">{{ .Title }}</a> - {{ .Description }}</p>
+  <p><a href="{{ .URL }}">{{ .Title }}</a> {{ if .Description}} - {{end}} {{ .Description }}</p>
   {{ end }}
   {{ end }}
+  <hr>
   {{.Content}}
 </main>
 {{ end }}

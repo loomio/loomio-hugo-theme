@@ -58,6 +58,11 @@ h6, .h6 { font-size: .75rem }
 
 #parentPageLink {
   margin-top: 2em;
+  a {
+    font-size: 1rem;
+    // color: rgba(0,0,0,0.6);
+    font-weight: 400;
+  }
 }
 
 .title {

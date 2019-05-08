@@ -1,14 +1,27 @@
+.sidenav-l1 {
+  font-weight: 600;
+}
+.sidenav-l2 {
+  font-weight: 600;
+
+}
+.sidenav-l3 {
+
+}
+a.active { text-decoration: underline;}
 .sidenav {
   // font-size: 0.85rem;
+  a {color: #333;}
   font-size: .9em;
   // a { color: $color-black; }
   ul {
     padding-top: 0.25em ;
     padding-bottom: 0.25em ;
-    margin-top: 0.25em ;
+    margin-top: 0.25em;
     margin-bottom: 0.25em ;
     list-style-type: none;
     ul {
+      // a { color: #333;}
       // border-left: 2px solid $color-primary;
     }
   }
@@ -18,6 +31,14 @@
 }
 
 .toc {
+  ul {
+    ul {
+      ul {
+        margin: 0;
+        margin-left: 0.5em;
+      }
+    }
+  }
   li {
     list-style-type: none;
   }
