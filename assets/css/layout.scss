@@ -6,7 +6,7 @@
 
 .multi-column {
   display: flex;
-  justify-content: left;
+  justify-content: space-between;
   padding: 0 1rem;
 }
 
@@ -14,13 +14,14 @@
   max-width: 40rem;
 }
 
-.multi-column__side {
-  display: none;
-  min-width: 18em;
-  max-width: 18em;
+.multi-column__side--inner {
   margin-top: 6em;
   padding: 1em;
   margin-right: 3em;
+}
+
+.multi-column__side--inner{
+  display: none;
 }
 
 @media only screen and (min-width: 72rem) {
@@ -32,7 +33,11 @@
     min-width: 40rem;
   }
   .multi-column__side {
-    display: block;
+    min-width: 18em;
+    max-width: 18em;
+  }
+  .multi-column__side *{
+      display: block;
   }
   // #parentPageLink{
   //   display: none;

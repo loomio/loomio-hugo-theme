@@ -21,15 +21,19 @@
   <body>
     <div class="multi-column">
       <aside class="multi-column__side">
-        {{- block "left" . }}{{- end }}
+        <div class="multi-column__side--inner">
+          {{- block "left" . }}{{- end }}
+        </div>
       </aside>
       <div class="multi-column__main">
         {{ partial "site/header.html" . }}
         {{- block "main" . }}{{- end }}
       </div>
-      <!-- <aside class="multi-column__side">
-        {{- block "right" . }}{{- end }}
-      </aside> -->
+      <aside class="multi-column__side">
+        <div class="multi-column__side--inner">
+          {{- block "right" . }}{{- end }}
+        </div>
+      </aside>
     </div>
     {{ partial "site/footer.html" . }}
   </body>
