@@ -24,7 +24,8 @@
   {{ end }}
   {{ else }}
   {{ range .Pages }}
-  <p><a href="{{ .URL }}">{{ .Title }}</a> {{ if .Description}} - {{end}} {{ .Description }}</p>
+  <h2><a href="{{ .URL }}" class="h2">{{ .Title }}</a></h2>
+  <p>{{ .Description }}</p>
   {{ end }}
   {{ end }}
   <hr>
