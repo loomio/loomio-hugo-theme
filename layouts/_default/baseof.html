@@ -19,20 +19,29 @@
     {{ partial "matomo.html" . }}
   </head>
   <body>
+    {{ partial "site/header.html" . }}
     <div class="multi-column">
-      <aside class="multi-column__side">
-        <div class="multi-column__side--inner">
-          {{- block "left" . }}{{- end }}
-        </div>
+      <aside class="multi-column__side multi-column__side--left">
+        <!-- <div class="multi-column__side--inner"> -->
+        {{- block "left" . }}{{- end }}
+        <!-- </div> -->
       </aside>
-      <div class="multi-column__main">
-        {{ partial "site/header.html" . }}
+
+      <main class="multi-column__main">
         {{- block "main" . }}{{- end }}
-      </div>
-      <aside class="multi-column__side">
-        <div class="multi-column__side--inner">
-          {{- block "right" . }}{{- end }}
+
+        <div class="site-footer__newsletter">
+          <p>
+          {{ if eq .Site.Title "Loomio Help"}}
+            Know when new Loomio features are released - and more!
+          {{ else }}
+            Inspiring stories of organizations using Loomio - delivered!
+          {{ end }}
+          </p>
+          <a href="https://help.loomio.org/en/newsletter">Join our newsletter!</a>
         </div>
+      </main>
+      <aside class="multi-column__side multi-column__side--right">
       </aside>
     </div>
     {{ partial "site/footer.html" . }}
