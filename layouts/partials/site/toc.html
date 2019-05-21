@@ -1,6 +1,8 @@
-<nav class="toc">
-{{ if .TableOfContents }}
-<!-- <h2 class="h4">On this page</h2> -->
-{{.TableOfContents}}
+{{if not (isset .Params "hidetoc") }}
+  <nav class="toc">
+  {{ if .TableOfContents }}
+  <!-- <h2 class="h4">On this page</h2> -->
+  {{.TableOfContents}}
+  {{ end }}
+  </nav>
 {{ end }}
-</nav>
