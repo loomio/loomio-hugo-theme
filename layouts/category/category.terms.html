@@ -1,12 +1,10 @@
 {{ define "main" }}
-<main class="single-column">
-  <header>
-    <h1>{{ .Title}}</h1>
-  </header>
-  <ul>
-    {{ range .Data.Pages.ByDate.Reverse }}
-      <li><a href="{{ .Permalink}}"> {{ .LinkTitle }} </a></li>
-    {{ end }}
-  </ul>
-</main>
+<header>
+  <h1>{{ .Title}}</h1>
+</header>
+<ul>
+  {{ range .Data.Pages.ByDate.Reverse }}
+    <li><a href="{{ .Permalink}}"> {{ .LinkTitle }} </a></li>
+  {{ end }}
+</ul>
 {{ end }}
