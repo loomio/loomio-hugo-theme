@@ -1,25 +1,23 @@
 {{ define "main" }}
-<main class="single-column">
-  <article class="post">
-    <header>
-      {{if isset .Params "image" }}
-      <img class="post-image" src="{{ index .Params "image" }}">
-      {{ end }}
-      <h1>{{ .Title }}</h1>
-      {{ partial "post/meta.html" . }}
-    </header>
-    <section class="post-body">
-    {{ .Content }}
-    <section>
-  </article>
-  <aside>
-    <p class="post-meta">{{ i18n "categories" }}:&nbsp;
-      {{ $baseurl := .Site.BaseURL }}
-      {{ range $i, $e := .Params.categories }}
-          {{if $i}},&nbsp;{{end}}
-          <a href="{{ $baseurl }}{{ $.Site.LanguagePrefix }}/categories/{{ replace (strings.ToLower .) " " "-"  }}">{{ . }}</a>
-      {{ end }}
-    </p>
-  </aside>
-</main>
+<article class="post">
+  <header>
+    {{if isset .Params "image" }}
+    <img class="post-image" src="{{ index .Params "image" }}">
+    {{ end }}
+    <h1>{{ .Title }}</h1>
+    {{ partial "post/meta.html" . }}
+  </header>
+  <section class="post-body">
+  {{ .Content }}
+  <section>
+</article>
+<aside>
+  <p class="post-meta">{{ i18n "categories" }}:&nbsp;
+    {{ $baseurl := .Site.BaseURL }}
+    {{ range $i, $e := .Params.categories }}
+        {{if $i}},&nbsp;{{end}}
+        <a href="{{ $baseurl }}{{ $.Site.LanguagePrefix }}/categories/{{ replace (strings.ToLower .) " " "-"  }}">{{ . }}</a>
+    {{ end }}
+  </p>
+</aside>
 {{ end }}
