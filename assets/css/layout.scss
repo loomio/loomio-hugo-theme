@@ -1,5 +1,6 @@
 .multi-column, .single-column {
   display: flex;
+  justify-content: space-around;
   margin: 0 auto;
   max-width: 88rem;
 }
@@ -53,6 +54,9 @@
     margin: 0 auto;
   }
   .multi-column__side--left {
+    display: block;
+  }
+  .multi-column__side--right {
     display: block;
   }
   .iframe {
