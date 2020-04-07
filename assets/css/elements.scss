@@ -11,11 +11,19 @@ body {
   color: $color-black;
   background-color: #fff;
   line-height: 1.7;
+  img {
+    box-shadow: 2px 2px 2px 2px #ddd;
+  }
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+.border-orange {
+  border: 1px solid orange;
+  box-shadow: none;
 }
 
 td img {
